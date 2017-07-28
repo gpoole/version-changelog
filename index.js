@@ -14,7 +14,7 @@ function insertHeading(data, versionString) {
   var date = new Date();
 
   return data.replace(
-    /(## \[Unreleased\].*)/g,
+    /(## \[Unreleased\].*)/gi,
     '$1\n\n## [' + versionString + '][] - ' + date.getFullYear() + '-' + dateWithLeadingZero(date.getMonth() + 1) + '-' + dateWithLeadingZero(date.getDate())
   );
 
@@ -34,10 +34,10 @@ function getVersionPrefix() {
 }
 
 function updateCompareUri(data, versionString) {
-  
+
   var versionWithPrefix = getVersionPrefix() + versionString;
 
-  var unreleasedLinkPattern = /\[Unreleased\]: (.*compare\/)(.*)\.\.\.HEAD/g;
+  var unreleasedLinkPattern = /\[Unreleased\]: (.*compare\/)(.*)\.\.\.HEAD/gi;
 
   if (unreleasedLinkPattern.test(data)) {
 

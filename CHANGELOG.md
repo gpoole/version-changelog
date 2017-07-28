@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- Correctly handle lowercase "unreleased" anchor
+
 ## [2.1.0][] - 2017-05-25
 
 ### Added

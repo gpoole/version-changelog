@@ -8,6 +8,10 @@
     "test": "mocha test/",
     "version": "./cli.js CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jesstelford/version-changelog.git"
+  },
   "keywords": [
     "changelog"
   ],
